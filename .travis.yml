@@ -7,10 +7,4 @@ notifications:
     on_failure: always
 
 script:
-  - |
-    if [ $TRAVIS_BRANCH == "master" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
-        echo 'Install WP'
-        sudo bash <( curl -sk https://raw.githubusercontent.com/litespeedtech/ls-cloud-image/master/Setup/wpimgsetup.sh )
-        #echo 'Per Instance'
-        #bash <( curl -sk https://raw.githubusercontent.com/litespeedtech/ls-cloud-image/master/Cloud-init/per-instance.sh )
-    fi 
+  - sudo bash <( curl -sk https://raw.githubusercontent.com/litespeedtech/ls-cloud-image/master/Setup/wpimgsetup.sh )
