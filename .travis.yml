@@ -1,11 +1,6 @@
 language: shell
 os: linux
-sudo: required
-
-matrix:
-  include:
-    - dist: bionic
-    #- dist: xenial
+dist: bionic
 
 notifications:
   email:
@@ -15,8 +10,8 @@ notifications:
 script:
   - sudo apt-get remove --purge mysql* -y
   - wget https://raw.githubusercontent.com/litespeedtech/ls-cloud-image/master/Setup/wpimgsetup.sh 
-  - chmod +x wpimgsetup.sh 
-  - bash wpimgsetup.sh
+  - sudo chmod +x wpimgsetup.sh 
+  - sudo bash wpimgsetup.sh
   - wget https://raw.githubusercontent.com/litespeedtech/ls-cloud-image/master/Cloud-init/per-instance.sh
-  - chmod +x wpimgsetup.sh 
-  - bash wpimgsetup.sh 
+  - sudo chmod +x per-instance.sh
+  - sudo bash per-instance.sh
