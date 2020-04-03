@@ -1,15 +1,20 @@
 language: shell
-os: linux
-dist: bionic
 
-notifications:
-  email:
-    on_success: never
-    on_failure: always
+jobs:
+include:
+    - os: linux
+      dist: bionic
+    - os: linux
+      dist: xenial  
+
+#notifications:
+#  email:
+#    on_success: never
+#    on_failure: always
 
 script:
-  - sudo apt-get remove --purge mysql* -y
-  - sudo su -c "bash <( curl -sk https://raw.githubusercontent.com/litespeedtech/ls-cloud-image/master/Setup/wpimgsetup.sh )"
-  - sudo su -c "bash <( curl -sk https://raw.githubusercontent.com/litespeedtech/ls-cloud-image/master/Cloud-init/per-instance.sh )"
-  - echo 'Reboot'
-  - reboot
+  - echo 'Q'
+#  - sudo apt-get remove --purge mysql* -y
+#  - sudo su -c "bash <( curl -sk https://raw.githubusercontent.com/litespeedtech/ls-cloud-image/master/Setup/wpimgsetup.sh )"
+#  - sudo su -c "bash <( curl -sk https://raw.githubusercontent.com/litespeedtech/ls-cloud-image/master/Cloud-init/per-instance.sh )"
+#  - curl -s http://127.0.0.1/ | grep 'OpenLiteSpeed WordPress One-Click'
