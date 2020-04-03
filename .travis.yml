@@ -12,7 +12,7 @@ script:
   #- sudo bash -x wpimgsetup.sh
   - cd /tmp/; wget -q https://raw.githubusercontent.com/litespeedtech/ols1clk/master/ols1clk.sh
   - sudo chmod +x ols1clk.sh
-  - echo 'Y' | sudo bash ols1clk.sh --lsphp 73 --wordpress
+  - echo 'Y' | sudo bash -x ols1clk.sh --wordpress
     #--wordpresspath ${DOCHM} \
     #--dbrootpassword ${root_mysql_pass} \
     #--dbname wordpress \
