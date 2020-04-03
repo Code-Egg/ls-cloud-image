@@ -14,7 +14,10 @@ script:
   #- sudo chmod +x ols1clk.sh
   #- echo 'Y' | sudo bash -x ols1clk.sh --wordpress
   - which mysqladmin
-  - mysql -u root -e 'show status'
+  - service mysql status
+  - service mysql stop
+  - apt-get remove --purge mysql* -y
+
     #--wordpresspath ${DOCHM} \
     #--dbrootpassword ${root_mysql_pass} \
     #--dbname wordpress \
