@@ -7,4 +7,6 @@ notifications:
     on_failure: always
 
 script:
-  - wget https://raw.githubusercontent.com/litespeedtech/ls-cloud-image/master/Setup/wpimgsetup.sh && sudo chmod +x wpimgsetup.sh && sudo bash wpimgsetup.sh
+  - wget https://raw.githubusercontent.com/litespeedtech/ls-cloud-image/master/Setup/wpimgsetup.sh 
+  - sudo chmod +x wpimgsetup.sh 
+  - sudo bash -x wpimgsetup.sh
