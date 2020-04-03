@@ -10,9 +10,10 @@ script:
   #- wget https://raw.githubusercontent.com/litespeedtech/ls-cloud-image/master/Setup/wpimgsetup.sh 
   #- sudo chmod +x wpimgsetup.sh 
   #- sudo bash -x wpimgsetup.sh
-  - cd /tmp/; wget -q https://raw.githubusercontent.com/Code-Egg/ols1clk/master/ols1clk.sh
-  - sudo chmod +x ols1clk.sh
-  - echo 'Y' | sudo bash -x ols1clk.sh --wordpress
+  #- cd /tmp/; wget -q https://raw.githubusercontent.com/Code-Egg/ols1clk/master/ols1clk.sh
+  #- sudo chmod +x ols1clk.sh
+  #- echo 'Y' | sudo bash -x ols1clk.sh --wordpress
+  - which mysqladmin
     #--wordpresspath ${DOCHM} \
     #--dbrootpassword ${root_mysql_pass} \
     #--dbname wordpress \
