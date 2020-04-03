@@ -9,9 +9,7 @@ notifications:
 
 script:
   - sudo apt-get remove --purge mysql* -y
-  - wget https://raw.githubusercontent.com/litespeedtech/ls-cloud-image/master/Setup/wpimgsetup.sh 
-  - sudo chmod +x wpimgsetup.sh 
-  - sudo bash wpimgsetup.sh
-  - wget https://raw.githubusercontent.com/litespeedtech/ls-cloud-image/master/Cloud-init/per-instance.sh
-  - sudo chmod +x per-instance.sh
-  - sudo bash per-instance.sh
+  - sudo su -c "bash <( curl -sk https://raw.githubusercontent.com/litespeedtech/ls-cloud-image/master/Setup/wpimgsetup.sh )"
+  - sudo su -c "bash <( curl -sk https://raw.githubusercontent.com/litespeedtech/ls-cloud-image/master/Cloud-init/per-instance.sh )"
+  - echo 'Reboot'
+  - reboot
