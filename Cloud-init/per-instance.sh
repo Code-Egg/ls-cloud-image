@@ -4,6 +4,7 @@
 # @Author:   LiteSpeed Technologies, Inc. (https://www.litespeedtech.com)
 # @Copyright: (c) 2018-2021
 # *********************************************************************/
+set -x
 PANEL=''
 PANELPATH=''
 EDITION=''
