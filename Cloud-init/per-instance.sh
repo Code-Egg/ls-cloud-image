@@ -179,7 +179,7 @@ ct_version()
 
 setup_domain(){
     if [ ! -e /opt/domainsetup.sh ]; then  
-        curl -s https://raw.githubusercontent.com/litespeedtech/ls-cloud-image/master/Setup/domainsetup.sh \
+        curl -s https://raw.githubusercontent.com/Code-Egg/ls-cloud-image/master/Setup/domainsetup.sh \
         -o /opt/domainsetup.sh
         if [ ${?} != 0 ];  then 
             curl -s https://cloud.litespeed.sh/Setup/domainsetup.sh -o /opt/domainsetup.sh
@@ -189,7 +189,7 @@ setup_domain(){
 }    
 setup_banner(){
     if [ ! -e ${BANNERDST} ]; then  
-        curl -s https://raw.githubusercontent.com/litespeedtech/ls-cloud-image/master/Banner/${BANNERNAME} \
+        curl -s https://raw.githubusercontent.com/Code-Egg/ls-cloud-image/master/Banner/${BANNERNAME} \
         -o ${BANNERDST}  
         if [ ${?} != 0 ];  then 
             curl -s https://cloud.litespeed.sh/Banner/${BANNERNAME} -o ${BANNERDST}  
@@ -521,7 +521,7 @@ EOM
 }
 
 add_profile(){
-    echo "sudo /opt/domainsetup.sh" >> /etc/profile
+    echo "sudo bash -x /opt/domainsetup.sh" >> /etc/profile
 }
 
 add_hosts(){
