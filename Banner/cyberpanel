@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+set -x 
 # Configured as part of the 1-Click Image build process
 function echoY
 {
