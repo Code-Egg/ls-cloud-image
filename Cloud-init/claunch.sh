@@ -4,6 +4,7 @@
 # @Author:   LiteSpeed Technologies, Inc. (https://www.litespeedtech.com)
 # @Copyright: (c) 2019-2020
 # *********************************************************************/
+set -x 
 
 CLDINITPATH='/var/lib/cloud/scripts/per-instance'
 AGENT_PATH='/usr/local/aegis'
