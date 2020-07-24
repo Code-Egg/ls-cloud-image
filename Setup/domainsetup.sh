@@ -345,8 +345,8 @@ main(){
         main_cert_setup
     fi   
     main_upgrade
-    endsetup
+    #endsetup
 }
 main
-rm -- "$0"
+#rm -- "$0"
 exit 0
