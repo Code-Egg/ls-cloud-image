@@ -724,7 +724,7 @@ maincloud(){
     gen_secretkey
     rm_dummy
     add_profile
-    set_tmp
+    #set_tmp
     if [ "${PANEL}" = 'cyber' ]; then
         panel_admin_update
         panel_sshkey_update
